@@ -1,6 +1,6 @@
 theme = "bento"
 languageCode = "en-us"
-baseurl = "http://example.com/"
+baseurl = "https://bento-hugo-theme.netlify.com/"
 title = "Bento"
 
 author = "Leonardo Faria"
@@ -10,20 +10,29 @@ copyright = "MIT"
 pygmentsCodefences = true
 pygmentsStyle = "vs"
 
+googleAnalytics = "UA-157386-36"
+disqusShortname = "bento-hugo-theme"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
 [params]
   name = "Bento"
   intro = true
   headline = "This is a headline"
   description = "A minimalist theme for Hugo, build with Tailwind CSS."
 
+  copyright = "Copyright © 2020 Someone"
+
   # favicon = "favicon.ico" # TODO: add support
   cover = "images/vancouver.jpg"
 
-  github = "https://www.github.com/XXXX"
-  twitter = "https://www.twitter.com/XXXX"
+  github = "XXXX"
+  twitter = "XXXX"
   linkedin = "https://linkedin.com/in/XXXX"
   email = "email@xxxx.com"
-  googleAnalyticsUserID = "UA-XXXXX-YY"
+
 
   # logo = "images/logo.png" # TODO: add support
   avatar = "images/avatar.jpg"
@@ -35,10 +44,10 @@ pygmentsStyle = "vs"
 
 [[menu.main]]
     name = "Hugo"
-    url = "/about"
+    url = "https://gohugo.io/"
     weight = 1
 
 [[menu.main]]
     name = "Tailwind CSS"
-    url = "/about"
+    url = "https://tailwindcss.com/"
     weight = 1
