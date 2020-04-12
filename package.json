@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
     "build": "hugo --gc --minify",
+    "build:example": "hugo --gc --minify -s exampleSite --themesDir=../..",
     "start": "hugo --gc"
   },
   "devDependencies": {
