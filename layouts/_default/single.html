@@ -2,5 +2,10 @@
 <article class="article">
     <h1 class="artitle__title">{{ .Title }}</h1>
     {{ .Content }}
+
+    <section class="comments">
+      <h2 class="comments__title">Comments</h2>
+      {{ template "_internal/disqus.html" . }}
+    </section>
 </article>
 {{ end }}

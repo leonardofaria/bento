@@ -1,4 +1,6 @@
 {{ if .Site.Params.intro }}
-  <h1 itemprop="name">{{ .Site.Params.headline }}</h1>
-  <p>{{ .Site.Params.description }}</p>
+  <div class="intro">
+    <h1>{{ .Site.Params.headline }}</h1>
+    <p>{{ .Site.Params.description }}</p>
+  </div>
 {{ end }}

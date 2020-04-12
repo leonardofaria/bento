@@ -16,9 +16,9 @@
       <div class="flex-grow mt-5 w-full flex flex-col justify-center items-center">
         {{if .Site.Params.avatar}}
           {{if or (eq (substr .Site.Params.avatar 0 7) "http://") (eq (substr .Site.Params.avatar 0 8) "https://")}}
-            <img class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-3" src="{{.Site.Params.avatar}}">
+            <img alt="{{ .Site.Title }}" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-3" src="{{.Site.Params.avatar}}">
           {{ else }}
-            <img class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-3" src="{{.Site.Params.avatar | relURL}}">
+            <img alt="{{ .Site.Title }}" class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-3" src="{{.Site.Params.avatar | relURL}}">
           {{ end }}
         {{ end }}
         <a href="{{ .Site.Home.Permalink }}" class="text-4xl font-normal flex flex-shrink-0 text-center text-white">
