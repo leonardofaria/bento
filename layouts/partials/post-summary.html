@@ -1,0 +1,9 @@
+<h2 class="text-3xl font-bold mb-2">{{ .Key }}</h2>
+
+<ol class="mb-4">
+  {{ range .Pages -}}
+  <li class="mb-6 md:flex md:flex-row">
+    <a class="text-lg md:ml-12" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{- end }}
+</ol>

@@ -1,0 +1,52 @@
+<ul class="flex justify-end">
+  {{ with .Site.Params.twitter }}
+    <li class="m-2">
+      <a href="{{ . }}" rel="me">
+        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Twitter</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </a>
+    </li>
+  {{ end }}
+  {{ with .Site.Params.facebook }}
+    <li class="m-2">
+      <a href="{{ . }}" rel="me">
+        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Facebook</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </a>
+    </li>
+  {{ end }}
+  {{ with .Site.Params.github }}
+    <li class="m-2">
+      <a href="{{ . }}" rel="me">
+        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Github</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </a>
+    </li>
+  {{ end }}
+  {{ with .Site.Params.linkedin }}
+    <li class="m-2">
+      <a href="{{ . }}" rel="me">
+        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Linkedin</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </a>
+    </li>
+  {{ end }}
+  {{ with .Site.Params.email }}
+    <li class="m-2">
+      <a href="mailto:{{ . }}">
+        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Email</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </a>
+    </li>
+  {{ end }}
+</ul>

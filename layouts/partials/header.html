@@ -1,0 +1,54 @@
+{{if and (.Site.Params.cover) (.IsHome)}}
+  {{if or (eq (substr .Site.Params.cover 0 7) "http://") (eq (substr .Site.Params.cover 0 8) "https://")}}
+    <header class="header flex w-full m-0 bg-cover bg-center" style="background-image: url({{.Site.Params.cover}})">
+  {{ else }}
+    <header class="header flex w-full m-0 bg-cover bg-center" style="background-image: url({{.Site.Params.cover | relURL}})">
+  {{ end }}
+    <div class="max-w-7xl mx-auto px-3 py-6 flex flex-col items-center w-full">
+      <div class="block sm:hidden text-white self-end mx-3">
+        {{ partial "nav-menu-buttons.html" . }}
+      </div>
+
+      <nav id="nav-menu" class="hidden md:block self-end text-white">
+        {{ partial "nav-links.html" . }}
+      </nav>
+
+      <div class="flex-grow mt-5 w-full flex flex-col justify-center items-center">
+        {{if .Site.Params.avatar}}
+          {{if or (eq (substr .Site.Params.avatar 0 7) "http://") (eq (substr .Site.Params.avatar 0 8) "https://")}}
+            <img class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-3" src="{{.Site.Params.avatar}}">
+          {{ else }}
+            <img class="w-24 h-24 md:w-32 md:h-32 rounded-full mb-3" src="{{.Site.Params.avatar | relURL}}">
+          {{ end }}
+        {{ end }}
+        <a href="{{ .Site.Home.Permalink }}" class="text-4xl font-normal flex flex-shrink-0 text-center text-white">
+          {{ .Site.Title }}
+        </a>
+
+        <nav class="text-white">
+          {{ partial "nav-social-links.html" . }}
+        </nav>
+      </div>
+    </div>
+  </header>
+{{else}}
+  <header class="w-full m-0">
+    <div class="max-w-7xl mx-auto p-3 flex items-center flex-wrap md:flex-no-wrap">
+      <a href="{{ .Site.Home.Permalink }}" class="text-3xl font-normal text-gray-600 flex flex-shrink-0 flex-grow">
+        {{ .Site.Title }}
+      </a>
+
+      <div class="block sm:hidden mx-2">
+        {{ partial "nav-menu-buttons.html" . }}
+      </div>
+
+      <nav id="nav-social-links" class="text-gray-400 hidden md:block md:order-last w-full md:w-auto md:ml-3">
+        {{ partial "nav-social-links.html" . }}
+      </nav>
+
+      <nav id="nav-menu" class="hidden md:block w-full md:w-auto text-gray-400">
+        {{ partial "nav-links.html" . }}
+      </nav>
+    </div>
+  </header>
+{{end}}

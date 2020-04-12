@@ -1,0 +1,211 @@
+.header {
+  min-height: 400px;
+  height: 50vh;
+}
+
+/* Article styles */
+.article {
+  @apply px-5;
+  @apply pb-5;
+}
+
+.article a {
+  @apply underline;
+}
+
+.article h1 {
+  @apply text-5xl;
+  @apply font-semibold;
+}
+
+.article h2 {
+  @apply text-4xl;
+  @apply font-semibold;
+}
+
+.article h3 {
+  @apply text-3xl;
+}
+
+.article h4 {
+  @apply text-2xl;
+}
+
+.article h5 {
+  @apply text-xl;
+}
+
+.article h6 {
+  @apply text-base;
+  @apply font-semibold;
+  @apply uppercase;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6,
+.article p,
+.article ul,
+.article ol,
+.article dl {
+  @apply my-6;
+  text-rendering: geometricPrecision;
+}
+
+.article p,
+.article ul,
+.article ol,
+.article dl,
+.article td {
+  @apply font-serif;
+  @apply text-xl;
+}
+
+
+.article ol,
+.article ul {
+  /* padding-left: 3rem; */
+}
+
+.article ol ol,
+.article ul ul,
+.article ul ol,
+.article ol ul {
+  @apply mb-2;
+  /* padding-left: 2em; */
+}
+
+.article li {
+  margin: 0.4em 0;
+}
+
+.article li li {
+  margin: 0;
+}
+
+.article blockquote {
+  @apply pl-5;
+  @apply border-l-4;
+  @apply border-gray-600;
+}
+
+.article blockquote p {
+  margin: 0.8em 0;
+  font-style: italic;
+}
+
+.article blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  color: #CCC;
+}
+
+.article blockquote small:before {
+  content: "\2014 \00A0";
+}
+
+.article blockquote cite {
+  font-weight: 700;
+}
+
+.article blockquote cite a {
+  font-weight: normal;
+}
+
+.article code, tt {
+  padding: 1px 3px;
+  @apply font-mono;
+  @apply text-lg;
+
+  white-space: pre-wrap;
+  border: #E3EDF3 1px solid;
+  background: #F7FAFB;
+  border-radius: 2px;
+}
+
+.article pre {
+  @apply my-2;
+  @apply border-solid;
+  @apply border;
+  @apply border-gray-300;
+  @apply w-full;
+  @apply p-2;
+  @apply font-mono;
+  @apply text-lg;
+  white-space: pre;
+  overflow: auto;
+  @apply bg-white;
+  @apply rounded;
+}
+
+.article pre code,
+.article pre tt {
+  font-size: inherit;
+  white-space: pre-wrap;
+  @apply bg-transparent;
+  @apply border-0;
+  @apply p-0;
+}
+
+.article kbd {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #CCC 1px solid;
+  color: #666;
+  text-shadow: #FFF 0 1px 0;
+  font-size: 0.9em;
+  font-weight: 700;
+  background: #F4F4F4;
+  border-radius: 4px;
+  box-shadow:
+      0 1px 0 rgba(0, 0, 0, 0.2),
+      0 1px 0 0 #fff inset;
+}
+
+.article table {
+  @apply my-6;
+  @apply w-full;
+  @apply max-w-full;
+  @apply bg-transparent;
+}
+
+.article table th,
+.article table td {
+  @apply p-2;
+  @apply align-top;
+  border-top: #EFEFEF 1px solid;
+}
+
+.article table th {
+  @apply text-black;
+}
+
+.article table caption + thead tr:first-child th,
+.article table caption + thead tr:first-child td,
+.article table colgroup + thead tr:first-child th,
+.article table colgroup + thead tr:first-child td,
+.article table thead:first-child tr:first-child th,
+.article table thead:first-child tr:first-child td {
+  @apply border-t-0;
+}
+
+.article table tbody > tr:nth-child(odd) > td,
+.article table tbody > tr:nth-child(odd) > th {
+  @apply bg-gray-100;
+}
+
+.article table.plain tbody > tr:nth-child(odd) > td,
+.article table.plain tbody > tr:nth-child(odd) > th {
+  @apply bg-transparent;
+}
+
+.article iframe,
+.article .fluid-width-video-wrapper {
+  @apply block;
+  @apply my-6;
+}

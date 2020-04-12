@@ -1,0 +1,30 @@
+{
+  "name": "bento-hugo",
+  "version": "0.0.1",
+  "description": "A minimalist theme for Hugo, build with Tailwind CSS.",
+  "main": "index.js",
+  "repository": "https://github.com/leonardofaria/bento",
+  "author": "Leonardo Faria <leonardofaria@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
+    "build": "hugo --gc --minify",
+    "start": "hugo --gc"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@tailwindcss/ui": "^0.1.3",
+    "autoprefixer": "^9.7.4",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.2.0",
+    "tailwindcss-font-inter": "^1.0.8"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,44 @@
+theme = "bento"
+languageCode = "en-us"
+baseurl = "http://example.com/"
+title = "Bento"
+
+author = "Leonardo Faria"
+copyright = "MIT"
+
+# Code higlighting settings
+pygmentsCodefences = true
+pygmentsStyle = "vs"
+
+[params]
+  name = "Bento"
+  intro = true
+  headline = "This is a headline"
+  description = "A minimalist theme for Hugo, build with Tailwind CSS."
+
+  # favicon = "favicon.ico" # TODO: add support
+  cover = "images/vancouver.jpg"
+
+  github = "https://www.github.com/XXXX"
+  twitter = "https://www.twitter.com/XXXX"
+  linkedin = "https://linkedin.com/in/XXXX"
+  email = "email@xxxx.com"
+  googleAnalyticsUserID = "UA-XXXXX-YY"
+
+  # logo = "images/logo.png" # TODO: add support
+  avatar = "images/avatar.jpg"
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 1
+
+[[menu.main]]
+    name = "Hugo"
+    url = "/about"
+    weight = 1
+
+[[menu.main]]
+    name = "Tailwind CSS"
+    url = "/about"
+    weight = 1
