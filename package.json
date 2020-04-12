@@ -7,20 +7,22 @@
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
+    "dev:example": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
     "build": "hugo --gc --minify",
     "build:example": "hugo --gc --minify -s exampleSite --themesDir=../..",
+    "deploy": "gh-pages -d public -b dist",
+    "deploy:example": "gh-pages -d exampleSite/public -b dist",
     "start": "hugo --gc"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "@tailwindcss/ui": "^0.1.3",
     "autoprefixer": "^9.7.4",
+    "gh-pages": "^2.2.0",
     "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.2.0",
-    "tailwindcss-font-inter": "^1.0.8"
+    "tailwindcss": "^1.2.0"
   },
   "browserslist": [
     "last 1 version",
