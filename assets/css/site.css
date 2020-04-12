@@ -3,7 +3,7 @@
   height: 50vh;
 }
 
-/* Article styles */
+/* .article styles */
 .article {
   @apply px-5;
   @apply pb-5;
@@ -208,4 +208,19 @@
 .article .fluid-width-video-wrapper {
   @apply block;
   @apply my-6;
+}
+
+.intro p {
+  @apply text-2xl;
+}
+
+.comments {
+  @apply my-4;
+  @apply py-4;
+  @apply border-t;
+  @apply border-gray-400;
+}
+
+.comments h2 {
+  @apply mt-0;
 }
