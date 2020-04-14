@@ -1,6 +1,6 @@
-<ul class="w-full flex flex-col md:flex-row justify-end items-end md:items-center mt-3 md:mt-0">
+<ul class="w-full flex flex-col lg:flex-row justify-end items-end lg:items-center mt-3 lg:mt-0">
   {{ range .Site.Menus.main.ByWeight }}
-    <li class="flex my-2 md:my-2 mx-1 md:mx-2">
+    <li class="flex my-2 lg:my-2 mx-1 lg:mx-2">
       <a title="{{ .Name }}" class="border py-2 px-3 rounded text-sm" href="{{ .URL }}">{{ .Name }}</a>
     </li>
   {{ end }}
