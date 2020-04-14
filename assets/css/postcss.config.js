@@ -18,7 +18,8 @@ module.exports = {
       ],
       // Include any special characters you're using in this regular expression
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-      fontFace: true
+      fontFace: true,
+      whitelistPatternsChildren: [/article/]
     }),
     require('autoprefixer')({
         grid: true
