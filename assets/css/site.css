@@ -9,6 +9,15 @@
   @apply pb-5;
 }
 
+.article .article__header {
+  @apply text-right;
+  @apply pb-6;
+}
+
+.article .artitle__title {
+  @apply mb-2;
+}
+
 .article a {
   @apply underline;
 }
