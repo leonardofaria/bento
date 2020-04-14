@@ -4,7 +4,6 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    require('tailwindcss-font-inter')(),
     require('@tailwindcss/ui'),
   ]
 }

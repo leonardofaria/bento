@@ -67,23 +67,9 @@
 
 .article ol,
 .article ul {
-  /* padding-left: 3rem; */
-}
-
-.article ol ol,
-.article ul ul,
-.article ul ol,
-.article ol ul {
-  @apply mb-2;
-  /* padding-left: 2em; */
-}
-
-.article li {
-  margin: 0.4em 0;
-}
-
-.article li li {
-  margin: 0;
+  @apply ml-1;
+  @apply list-inside;
+  list-style-type: initial;
 }
 
 .article blockquote {
