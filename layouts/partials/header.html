@@ -1,8 +1,8 @@
 {{if and (.Site.Params.cover) (.IsHome)}}
   {{if or (eq (substr .Site.Params.cover 0 7) "http://") (eq (substr .Site.Params.cover 0 8) "https://")}}
-    <header class="header flex w-full m-0 bg-cover bg-center" style="background-image: url({{.Site.Params.cover}})">
+    <header class="header flex w-full m-0 bg-cover bg-center" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55)), url({{.Site.Params.cover}})">
   {{ else }}
-    <header class="header flex w-full m-0 bg-cover bg-center" style="background-image: url({{.Site.Params.cover | relURL}})">
+    <header class="header flex w-full m-0 bg-cover bg-center" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55)), url({{.Site.Params.cover | relURL}})">
   {{ end }}
     <div class="max-w-7xl mx-auto px-3 py-6 flex flex-col items-center w-full">
       <div class="block lg:hidden text-white self-end mx-3">
