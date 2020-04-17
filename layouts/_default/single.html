@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article class="article">
-    <h1 class="artitle__title">{{ .Title }}</h1>
+    <h1 class="artitle__title"><a href="{{.Permalink}}">{{ .Title }}</a></h1>
 
     {{if not .Params.hideMetadata }}
       <header class="article__header">

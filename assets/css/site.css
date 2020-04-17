@@ -7,47 +7,64 @@
 .article {
   @apply px-5;
   @apply pb-5;
+  @apply text-gray-500;
 }
 
-.article .article__header {
+.article__header {
   @apply text-right;
   @apply pb-6;
 }
 
-.article .artitle__title {
-  @apply mb-2;
+.artitle__title {
+  @apply leading-tight;
+  @apply mb-4;
 }
 
 .article a {
   @apply underline;
+  @apply text-gray-700;
+}
+
+.article a:hover {
+  @apply text-blue-600;
+}
+
+.artitle__title a {
+  @apply no-underline;
 }
 
 .article h1 {
   @apply text-5xl;
   @apply font-semibold;
+  @apply text-gray-700;
 }
 
 .article h2 {
   @apply text-4xl;
   @apply font-semibold;
+  @apply text-gray-700;
 }
 
 .article h3 {
   @apply text-3xl;
+  @apply text-gray-700;
 }
 
 .article h4 {
   @apply text-2xl;
+  @apply text-gray-700;
 }
 
 .article h5 {
   @apply text-xl;
+  @apply text-gray-700;
 }
 
 .article h6 {
   @apply text-base;
   @apply font-semibold;
   @apply uppercase;
+  @apply text-gray-700;
 }
 
 .article h1,
