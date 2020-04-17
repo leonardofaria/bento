@@ -25,7 +25,8 @@
   @apply text-gray-700;
 }
 
-.article a:hover {
+.article a:hover,
+.article a:focus {
   @apply text-blue-600;
 }
 
@@ -103,6 +104,8 @@
   @apply border-l-4;
   @apply border-gray-600;
 }
+
+/* TODO: port to Tailwind CSS */
 
 .article blockquote p {
   margin: 0.8em 0;
