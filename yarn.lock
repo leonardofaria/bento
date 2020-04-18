@@ -1179,13 +1179,6 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-tailwindcss-font-inter@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.npmjs.org/tailwindcss-font-inter/-/tailwindcss-font-inter-1.0.8.tgz#132f8bc3c7434abf1651da06114b8f08c66307d6"
-  integrity sha512-/AxArXcZ4GN70AthR/jIES7h9VrY5Xocjs05A46X1CsWLt63m9Bwq8y5gCZ5/CIUpUl1GKFDTIUgmo9W2kNGFQ==
-  dependencies:
-    lodash "^4.17.15"
-
 tailwindcss@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-1.2.0.tgz#5df317cebac4f3131f275d258a39da1ba3a0f291"
