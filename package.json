@@ -7,6 +7,7 @@
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "hugo server --disableFastRender",
     "dev:example": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
     "build": "hugo --gc --minify",
     "build:example": "hugo --gc --minify -s exampleSite --themesDir=../..",
