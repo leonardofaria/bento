@@ -2,6 +2,8 @@
 
 A minimalist theme for Hugo, build with Tailwind CSS.
 
+## Demo: [Bento](https://bento-hugo-theme.netlify.app/)
+
 ![Theme screenshot](https://raw.githubusercontent.com/leonardofaria/bento/master/images/screenshot.png)
 
 ## Features
