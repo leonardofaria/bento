@@ -4,12 +4,12 @@
   {{ else }}
     <header class="header flex w-full m-0 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55)), url({{.Site.Params.cover | relURL}})">
   {{ end }}
-    <div class="max-w-7xl mx-auto px-3 py-6 flex flex-col items-center w-full">
+    <div class="max-w-7xl mx-auto p-6 flex flex-col items-center w-full relative">
       <div class="block lg:hidden text-white self-end mx-3">
         {{ partial "nav-menu-buttons.html" . }}
       </div>
 
-      <nav id="nav-menu" class="hidden lg:block self-end text-white">
+      <nav id="nav-menu" class="absolute right-8 top-10 lg:relative hidden lg:block self-end text-white">
         {{ partial "nav-links.html" . }}
       </nav>
 
@@ -33,7 +33,7 @@
   </header>
 {{else}}
   <header class="w-full m-0">
-    <div class="max-w-7xl mx-auto p-3 flex items-center flex-wrap lg:flex-no-wrap">
+    <div class="max-w-7xl mx-auto p-6 flex items-center flex-wrap lg:flex-no-wrap relative">
       <a href="{{ .Site.Home.Permalink }}" class="text-3xl font-normal text-gray-600 flex flex-shrink-0 flex-grow">
         {{ .Site.Title }}
       </a>
@@ -42,13 +42,15 @@
         {{ partial "nav-menu-buttons.html" . }}
       </div>
 
-      <nav id="nav-social-links" class="text-gray-400 hidden lg:block lg:order-last w-full lg:w-auto lg:ml-3">
-        {{ partial "nav-social-links.html" . }}
-      </nav>
+      <div class="absolute right-8 top-16 lg:relative ">
+        <nav id="nav-social-links" class="text-gray-400 hidden lg:block lg:order-last w-full lg:w-auto lg:ml-3">
+          {{ partial "nav-social-links.html" . }}
+        </nav>
 
-      <nav id="nav-menu" class="hidden lg:block w-full lg:w-auto text-gray-400">
-        {{ partial "nav-links.html" . }}
-      </nav>
+        <nav id="nav-menu" class="hidden lg:block w-full lg:w-auto text-gray-400">
+          {{ partial "nav-links.html" . }}
+        </nav>
+      </div>
     </div>
   </header>
 {{end}}
