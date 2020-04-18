@@ -1,0 +1,14 @@
+<aside class="flex">
+  {{ with .NextInSection }}
+    <a class="flex flex-col py-7 px-3 w-50 flex-grow" style="{{ if .Params.image }}background-image: url({{ .Params.image | relURL }}){{ else }}no-cover{{ end }}" href="{{ .RelPermalink }}">
+      <span>Read this next</span>
+      <strong>{{.Title}}</strong>
+    </a>
+  {{ end }}
+  {{ with .PrevInSection }}
+    <a class="flex flex-col py-7 px-3 w-50 flex-grow" style="{{ if .Params.image }}background-image: url({{ .Params.image  | relURL}}){{ else }}no-cover{{ end }}" href="{{ .RelPermalink }}">
+      <span>You might enjoy</span>
+      <strong>{{.Title}}</strong>
+    </a>
+  {{ end }}
+</aside>
