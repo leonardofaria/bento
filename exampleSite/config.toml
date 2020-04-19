@@ -17,6 +17,8 @@ disqusShortname = "bento-hugo-theme"
 category = "categories"
 tag = "tags"
 
+[markup.highlight]
+  style = "github"
 [markup.goldmark.renderer]
   unsafe = true
 
