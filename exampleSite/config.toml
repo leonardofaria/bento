@@ -46,11 +46,6 @@ tag = "tags"
     weight = 1
 
 [[menu.main]]
-    name = "Hugo"
-    url = "https://gohugo.io/"
-    weight = 1
-
-[[menu.main]]
-    name = "Tailwind CSS"
-    url = "https://tailwindcss.com/"
+    name = "Source code"
+    url = "https://github.com/leonardofaria/bento"
     weight = 1
