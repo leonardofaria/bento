@@ -21,4 +21,14 @@
     });
   }
 </script>
+
+{{if and (.Site.Params.cover) (.IsHome)}}
+<script>
+window.onscroll = function() {
+  const speed = -3;
+  const header = document.querySelector('.header');
+  header.style.backgroundPosition = (-window.pageXOffset/speed)+"px "+(-window.pageYOffset/speed)+"px";
+}
+</script>
+{{end}}
 {{ template "_internal/google_analytics.html" . }}
