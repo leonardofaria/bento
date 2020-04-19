@@ -1,7 +1,7 @@
 <h2 class="text-3xl font-bold mb-2">{{ .Key }}</h2>
 
 <ol class="mb-4">
-  {{ range .Pages -}}
+  {{ range where .Pages "Type" "ne" "page" -}}
   <li>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </li>
