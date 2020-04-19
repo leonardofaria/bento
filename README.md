@@ -2,7 +2,7 @@
 
 A minimalist theme for Hugo, build with Tailwind CSS.
 
-## Demo: [Bento](https://bento-hugo-theme.netlify.app/)
+## Demo: [Bento](https://bento-hugo-theme.netlify.app/) - [My personal website](https://leonardofaria.net)
 
 ![Theme screenshot](https://raw.githubusercontent.com/leonardofaria/bento/master/images/screenshot.png)
 
@@ -10,8 +10,9 @@ A minimalist theme for Hugo, build with Tailwind CSS.
 
 - Clean: inspired by Casper, Medium and other minimalist design ideas
 - Responsive
-- Super-fast - close to 100% in Lighthouse tests
+- Super-fast - [100% in Lighthouse tests](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fbento-hugo-theme.netlify.app%2F)
 - Tailwind CSS with PostCSS: super tiny CSS file
+- Google Analytics and Disqus integration
 
 ## Installation
 
