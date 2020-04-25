@@ -1,6 +1,31 @@
 .header {
+  position: relative;
   min-height: 400px;
   height: 50vh;
+}
+
+.header:before, .header:after {
+  box-sizing: border-box;
+  content: " ";
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  border: 20px solid transparent;
+  border-bottom-color: #f9fafb;
+}
+
+.header:before {
+  left: 0;
+  border-right: 30px solid transparent;
+  border-left: 0;
+}
+
+.header:after {
+  right: 0;
+  border-left: 30px solid transparent;
+  border-right: 0;
 }
 
 /* .article styles */
