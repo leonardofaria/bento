@@ -48,6 +48,9 @@
 .article a {
   @apply underline;
   @apply text-gray-700;
+  @apply transition;
+  @apply duration-300;
+  @apply ease-in-out;
 }
 
 .article a:hover,
