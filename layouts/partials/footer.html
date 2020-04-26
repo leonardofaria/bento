@@ -26,8 +26,30 @@
 <script>
 window.onscroll = function() {
   const speed = -3;
-  const header = document.querySelector('.header');
+  const header = document.querySelector('#header');
   header.style.backgroundPosition = (-window.pageXOffset/speed)+"px "+(-window.pageYOffset/speed)+"px";
+}
+</script>
+{{else}}
+<script>
+let scrollpos = window.scrollY;
+const header = document.querySelector('#header');
+const headerContainer = document.querySelector("#header-container");
+
+const addClassOnScroll = () => {
+  header.classList.add("shadow");
+  header.classList.add("bg-white");
+}
+const removeClassOnScroll = () => {
+  header.classList.remove("shadow");
+  header.classList.remove("bg-white");
+}
+
+window.onscroll = function() {
+  scrollpos = window.scrollY;
+
+  if (scrollpos > 0) { addClassOnScroll() }
+  else { removeClassOnScroll() }
 }
 </script>
 {{end}}

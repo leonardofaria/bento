@@ -1,7 +1,7 @@
-<ul class="w-full flex flex-col lg:flex-row justify-end items-end lg:items-center mt-3 lg:mt-0">
+<ul class="w-full flex flex-col lg:flex-row justify-end items-end lg:items-center">
   {{ range .Site.Menus.main.ByWeight }}
     <li class="flex my-2 lg:my-2 mx-1 lg:mx-2">
-      <a title="{{ .Name }}" class="border py-2 px-3 rounded text-sm" href="{{ .URL }}">{{ .Name }}</a>
+      <a title="{{ .Name }}" class="lg:border lg:py-2 lg:px-3 rounded text-sm" href="{{ .URL }}">{{ .Name }}</a>
     </li>
   {{ end }}
 </ul>
