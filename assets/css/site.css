@@ -1,3 +1,7 @@
+.bg-gradient {
+  background-image: linear-gradient(to top, rgba(217, 219, 224, 0.5) 0, rgb(249, 250, 251) 500px);
+}
+
 .header {
   position: relative;
   min-height: 400px;
