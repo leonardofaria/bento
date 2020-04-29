@@ -32,9 +32,13 @@ window.onscroll = function() {
 </script>
 {{else}}
 <script>
-let scrollpos = window.scrollY;
+let scrollPos = window.scrollY;
 const header = document.querySelector('#header');
 const headerContainer = document.querySelector("#header-container");
+const readingProgressBar = document.querySelector("#reading-progress-bar");
+let scrollTop = 0;
+let scrollBottom = 0;
+let scrollPercent = 0;
 
 const addClassOnScroll = () => {
   header.classList.add("shadow");
@@ -46,9 +50,13 @@ const removeClassOnScroll = () => {
 }
 
 window.onscroll = function() {
-  scrollpos = window.scrollY;
+  scrollPos = window.scrollY;
+  scrollTop = document.documentElement["scrollTop"] || document.body["scrollTop"];
+  scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.documentElement.clientHeight;
+  scrollPercent = scrollTop / scrollBottom * 100;
+  readingProgressBar.style.width = (scrollTop / scrollBottom * 100) + '%' ;
 
-  if (scrollpos > 0) { addClassOnScroll() }
+  if (scrollPos > 0) { addClassOnScroll() }
   else { removeClassOnScroll() }
 }
 </script>
