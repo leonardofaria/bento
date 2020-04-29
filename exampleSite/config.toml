@@ -32,6 +32,7 @@ tag = "tags"
 
   # favicon = "favicon.ico" # TODO: add support
   cover = "images/vancouver.jpg"
+  ogImage = "images/og_image.jpg"
 
   github = "XXXX"
   twitter = "XXXX"

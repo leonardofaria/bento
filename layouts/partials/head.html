@@ -24,11 +24,19 @@
     <meta name="twitter:image" content="{{ . | absURL }}" />
     <meta name="twitter:image:src" content="{{ . | absURL }}" />
   {{ else }}
-    <meta itemprop="image" content="{{ .Site.Params.cover | absURL }}" />
-    <meta property="og:image" content="{{ .Site.Params.cover | absURL }}" />
-    <meta name="twitter:image" content="{{ .Site.Params.cover | absURL }}" />
-    <meta name="twitter:image:src" content="{{ .Site.Params.cover | absURL }}" />
+    {{ if .Site.Params.ogImage }}
+      <meta itemprop="image" content="{{ .Site.Params.ogImage | absURL }}" />
+      <meta property="og:image" content="{{ .Site.Params.ogImage | absURL }}" />
+      <meta name="twitter:image" content="{{ .Site.Params.ogImage | absURL }}" />
+      <meta name="twitter:image:src" content="{{ .Site.Params.ogImage | absURL }}" />
+    {{ else }}
+      <meta itemprop="image" content="{{ .Site.Params.cover | absURL }}" />
+      <meta property="og:image" content="{{ .Site.Params.cover | absURL }}" />
+      <meta name="twitter:image" content="{{ .Site.Params.cover | absURL }}" />
+      <meta name="twitter:image:src" content="{{ .Site.Params.cover | absURL }}" />
+    {{ end }}
   {{ end }}
+  <meta name="twitter:card" content="summary_large_image" />
   <!-- Description tags -->
   {{ if .IsPage }}
     <meta property="og:type" content="article" />
@@ -64,8 +72,11 @@
   {{ with.Params.author }}
     <meta property="og:article:author" content="{{ . }}" />
     <meta property="article:author" content="{{ . }}" />
-    <meta name="twitter:creator" content="{{ . }}" />
     <meta name="author" content="{{ . }}" />
+  {{ end }}
+
+  {{ with.Params.twitter }}
+    <meta name="twitter:creator" content="{{ . }}" />
   {{ end }}
 
   {{ hugo.Generator }}
