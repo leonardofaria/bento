@@ -23,7 +23,7 @@
             <img alt="{{ .Site.Title }}" class="w-24 h-24 lg:w-32 lg:h-32 rounded-full mb-3" src="{{.Site.Params.avatar | relURL}}">
           {{ end }}
         {{ end }}
-        <a href="{{ .Site.Home.Permalink }}" class="text-4xl font-normal flex flex-shrink-0 text-center text-white hover:text-gray-300 focus:text-gray-300">
+        <a href="{{ .Site.Home.Permalink }}" class="text-4xl font-normal flex flex-shrink-0 text-center text-white focus:text-gray-300 opacity-75 hover:opacity-100 transition duration-300 ease-in-out">
           {{ .Site.Title }}
         </a>
 
@@ -45,11 +45,11 @@
       </div>
 
       <div class="absolute right-8 top-16 lg:relative lg:right-0 lg:top-0 flex flex-col lg:flex-row items-center rounded-md bg-white shadow lg:bg-transparent lg:shadow-none">
-        <nav id="nav-social-links" class="p-4 lg:p-0 text-gray-400 hidden lg:block lg:order-last w-full lg:w-auto lg:ml-3">
+        <nav id="nav-social-links" class="p-4 lg:p-0 text-gray-600 hidden lg:block lg:order-last w-full lg:w-auto lg:ml-3">
           {{ partial "nav-social-links.html" . }}
         </nav>
 
-        <nav id="nav-menu" class="p-4 lg:p-0 hidden lg:block w-full lg:w-auto text-gray-400">
+        <nav id="nav-menu" class="p-4 lg:p-0 hidden lg:block w-full lg:w-auto text-gray-600">
           {{ partial "nav-links.html" . }}
         </nav>
       </div>
