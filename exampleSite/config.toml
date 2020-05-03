@@ -43,6 +43,8 @@ tag = "tags"
   # logo = "images/logo.png" # TODO: add support
   avatar = "images/avatar.jpg"
 
+  authorBio = "Bento is a doggo who likes to code. Follow him on <a href='#'>Twitter</a>"
+
 [[menu.main]]
     name = "About"
     url = "/about"
