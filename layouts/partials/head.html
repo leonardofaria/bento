@@ -18,43 +18,26 @@
   <meta name="twitter:url" content="{{ .Permalink }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
   <!-- Image tags -->
-  {{ if .IsPage }}
-
-    {{ if .Params.ogImage }}
-      <meta itemprop="image" content="{{ .Params.ogImage | absURL }}" />
-      <meta property="og:image" content="{{ .Params.ogImage | absURL }}" />
-      <meta name="twitter:image" content="{{ .Params.ogImage | absURL }}" />
-      <meta name="twitter:image:src" content="{{ .Params.ogImage | absURL }}" />
-    {{ else }}
-      <meta itemprop="image" content="{{ .Site.Params.cover | absURL }}" />
-      <meta property="og:image" content="{{ .Site.Params.cover | absURL }}" />
-      <meta name="twitter:image" content="{{ .Site.Params.cover | absURL }}" />
-      <meta name="twitter:image:src" content="{{ .Site.Params.cover | absURL }}" />
-    {{ end }}
-
+  {{ with .Params.ogImage }}
+    <meta itemprop="image" content="{{ . | absURL }}" />
+    <meta property="og:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image:src" content="{{ . | absURL }}" />
   {{ else }}
-
-    {{ with .Params.image }}
+    {{ with .Site.Params.ogImage }}
       <meta itemprop="image" content="{{ . | absURL }}" />
       <meta property="og:image" content="{{ . | absURL }}" />
       <meta name="twitter:image" content="{{ . | absURL }}" />
       <meta name="twitter:image:src" content="{{ . | absURL }}" />
     {{ else }}
-      {{ if .Site.Params.ogImage }}
-        <meta itemprop="image" content="{{ .Site.Params.ogImage | absURL }}" />
-        <meta property="og:image" content="{{ .Site.Params.ogImage | absURL }}" />
-        <meta name="twitter:image" content="{{ .Site.Params.ogImage | absURL }}" />
-        <meta name="twitter:image:src" content="{{ .Site.Params.ogImage | absURL }}" />
-      {{ else }}
-        <meta itemprop="image" content="{{ .Site.Params.cover | absURL }}" />
-        <meta property="og:image" content="{{ .Site.Params.cover | absURL }}" />
-        <meta name="twitter:image" content="{{ .Site.Params.cover | absURL }}" />
-        <meta name="twitter:image:src" content="{{ .Site.Params.cover | absURL }}" />
+      {{ with .Site.Params.cover }}
+        <meta itemprop="image" content="{{ . | absURL }}" />
+        <meta property="og:image" content="{{ . | absURL }}" />
+        <meta name="twitter:image" content="{{ . | absURL }}" />
+        <meta name="twitter:image:src" content="{{ . | absURL }}" />
       {{ end }}
     {{ end }}
-
   {{ end }}
-
   <meta name="twitter:card" content="summary_large_image" />
   <!-- Description tags -->
   {{ if .IsPage }}
