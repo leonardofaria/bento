@@ -305,9 +305,24 @@
   @apply text-white;
 }
 
-.comments {
+.comments,
+.pagination {
   @apply my-5;
   @apply py-5;
   @apply border-t;
   @apply border-gray-400;
+}
+
+.pagination {
+  @apply flex;
+  @apply justify-center;
+}
+
+.pagination .disabled {
+  @apply opacity-25;
+}
+
+.pagination a {
+  @apply p-2;
+  @apply m-2;
 }

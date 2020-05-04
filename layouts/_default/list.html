@@ -1,8 +1,16 @@
 {{ define "main" }}
-  {{ range .Pages }}
-    <article>
-      <h1 class="font-bold font-thin text-3xl text-gray-700"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-      {{ .Content }}
+<div id="reading-progress-bar" role="presentation" class="fixed z-10 top-0 left-0 h-1 bg-gray-700"></div>
+
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+  {{ range $paginator.Pages }}
+    <article class="article border-b border-gray-400">
+      <h1 class="artitle__title"><a href="{{.Permalink}}">{{ .Title }}</a></h1>
+
+      {{ .Summary }}
     </article>
+  {{ end }}
+
+  {{ if gt $paginator.TotalPages 1 }}
+    {{ template "_internal/pagination.html" . }}
   {{ end }}
 {{ end }}
