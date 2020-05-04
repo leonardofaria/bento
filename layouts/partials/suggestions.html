@@ -1,12 +1,12 @@
 <aside class="flex">
   {{ with .NextInSection }}
-    <a class="w-full md:w-1/2 flex flex-col items-center py-7 px-3 no-underline rounded-md hover:bg-white transition duration-300 ease-in-out" style="{{ if .Params.image }}background-image: url({{ .Params.image | relURL }}){{ else }}no-cover{{ end }}" href="{{ .RelPermalink }}">
+    <a class="w-full md:w-1/2 flex flex-col items-center py-7 px-3 no-underline rounded-md hover:bg-white transition duration-300 ease-in-out" href="{{ .RelPermalink }}">
       <span class="border border-gray-6 text-xs rounded-md mb-2 uppercase font-bold py-2 px-3">Read this next</span>
       <span class="text-center">{{.Title}}</span>
     </a>
   {{ end }}
   {{ with .PrevInSection }}
-    <a class="w-full md:w-1/2 flex flex-col items-center py-7 px-3 no-underline rounded-md hover:bg-white transition duration-300 ease-in-out" style="{{ if .Params.image }}background-image: url({{ .Params.image  | relURL}}){{ else }}no-cover{{ end }}" href="{{ .RelPermalink }}">
+    <a class="w-full md:w-1/2 flex flex-col items-center py-7 px-3 no-underline rounded-md hover:bg-white transition duration-300 ease-in-out" href="{{ .RelPermalink }}">
       <span class="border border-gray-6 text-xs rounded-md mb-2 uppercase font-bold py-2 px-3">You might enjoy</span>
       <span class="text-center">{{.Title}}</span>
     </a>
