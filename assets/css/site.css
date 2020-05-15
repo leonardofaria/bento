@@ -178,13 +178,26 @@
   border-radius: 2px;
 }
 
+.article .full-width, 
+.article .highlight {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; 
+}
+
+.article .highlight {
+  @apply bg-white;
+}
+
 .article pre {
+  @apply max-w-3xl;
+  @apply m-auto;
   @apply my-2;
-  @apply border-solid;
-  @apply border;
-  @apply border-gray-300;
-  @apply w-full;
-  @apply p-2;
+  @apply px-5;
+  @apply py-4;
   @apply font-mono;
   @apply text-lg;
   white-space: pre;
