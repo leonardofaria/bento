@@ -43,10 +43,12 @@ let scrollPercent = 0;
 const addClassOnScroll = () => {
   header.classList.add("shadow");
   header.classList.add("bg-white");
+  header.classList.remove("py-4");
 }
 const removeClassOnScroll = () => {
   header.classList.remove("shadow");
   header.classList.remove("bg-white");
+  header.classList.add("py-4");
 }
 
 window.onscroll = function() {
