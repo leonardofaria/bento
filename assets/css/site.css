@@ -1,3 +1,11 @@
+.backdrop-filter-blur {
+  backdrop-filter: blur(5px);
+}
+
+.bg-white-90 {
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .bg-gradient {
   background-image: linear-gradient(to top, rgba(217, 219, 224, 0.7) 0, rgb(249, 250, 251) 500px);
 }
