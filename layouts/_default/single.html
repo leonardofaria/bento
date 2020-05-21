@@ -52,5 +52,7 @@
     {{ end }}
 </article>
 
-{{ partial "suggestions.html" . }}
+{{if not .Params.hideSuggestions }}
+  {{ partial "suggestions.html" . }}
+{{ end }}
 {{ end }}
