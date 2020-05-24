@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .backdrop-filter-blur {
   backdrop-filter: blur(5px);
 }
@@ -124,6 +128,16 @@
 .article dl {
   @apply my-6;
   text-rendering: geometricPrecision;
+}
+
+/* Set the scroll-margin for internal anchor links, since we have a fixed top bar */
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  scroll-margin-top: 8rem;
 }
 
 .article p,
