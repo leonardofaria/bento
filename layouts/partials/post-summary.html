@@ -1,9 +1,11 @@
-<h2 class="text-3xl font-bold mb-2">{{ .Key }}</h2>
-
-<ol class="mb-4">
-  {{ range where .Pages "Type" "ne" "page" -}}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </li>
-  {{- end }}
-</ol>
+<div class="flex flex-col md:flex-row border-b border-gray-400">
+  <h2 class="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">{{ .Key }}</h2>
+  
+  <ol class="md:pt-3 mb-4">
+    {{ range where .Pages "Type" "ne" "page" -}}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{- end }}
+  </ol>
+</div>
