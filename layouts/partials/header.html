@@ -9,13 +9,13 @@
         {{ partial "nav-menu-buttons.html" . }}
       </div>
 
-      <div id="nav-menu" class="absolute right-8 top-16 lg:relative lg:right-0 lg:top-0 hidden lg:block self-end text-white rounded-md bg-black shadow lg:bg-transparent lg:shadow-none">
+      <div id="nav-menu" class="absolute right-8 top-16 lg:py-6 lg:my-4 lg:right-0 lg:top-0 hidden lg:block self-end text-white rounded-md bg-black shadow lg:bg-transparent lg:shadow-none">
         <nav class="p-2 lg:p-0">
           {{ partial "nav-links.html" . }}
         </nav>
       </div>
 
-      <div class="flex-grow mt-5 w-full flex flex-col justify-center items-center">
+      <div class="flex-grow w-full flex flex-col justify-center items-center">
         {{if .Site.Params.avatar}}
           {{if or (eq (substr .Site.Params.avatar 0 7) "http://") (eq (substr .Site.Params.avatar 0 8) "https://")}}
             <img alt="{{ .Site.Title }}" class="w-24 h-24 lg:w-32 lg:h-32 rounded-full mb-3" src="{{.Site.Params.avatar}}">
