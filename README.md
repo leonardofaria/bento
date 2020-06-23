@@ -14,6 +14,9 @@ A minimalist theme for Hugo, build with Tailwind CSS.
 - Tailwind CSS with PostCSS: super tiny CSS file
 - Google Analytics and Disqus integration
 - Syntax Highlighting with GitHub theme
+- Full content RSS
+- Support to custom links in the top bar
+- Subtle animations
 
 ## Installation
 
