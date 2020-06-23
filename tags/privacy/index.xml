@@ -1,1 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>privacy on Bento</title><link>https://bento-hugo-theme.netlify.app/tags/privacy/</link><description>Recent content in privacy on Bento</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>MIT</copyright><lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://bento-hugo-theme.netlify.app/tags/privacy/index.xml" rel="self" type="application/rss+xml"/><item><title>Rich Content</title><link>https://bento-hugo-theme.netlify.app/post/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>https://bento-hugo-theme.netlify.app/post/rich-content/</guid><description>&lt;p>Hugo ships with several &lt;a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>privacy on Bento</title><link>https://bento-hugo-theme.netlify.app/tags/privacy/</link><description>Recent content in privacy on Bento</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>MIT</copyright><lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://bento-hugo-theme.netlify.app/tags/privacy/index.xml" rel="self" type="application/rss+xml"/><item><title>Rich Content</title><link>https://bento-hugo-theme.netlify.app/post/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>https://bento-hugo-theme.netlify.app/post/rich-content/</guid><description>&lt;p>Hugo ships with several &lt;a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
+&lt;hr>
+&lt;h2 id="instagram-simple-shortcode">Instagram Simple Shortcode&lt;/h2>
+&lt;style type="text/css">
+.__h_instagram.card {
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+font-size: 14px;
+border: 1px solid rgb(219, 219, 219);
+padding: 0;
+margin-top: 30px;
+}
+.__h_instagram.card .card-header, .__h_instagram.card .card-body {
+padding: 10px 10px 10px;
+}
+.__h_instagram.card img {
+width: 100%;
+height: auto;
+}
+&lt;/style>
+&lt;div class="__h_instagram s_instagram_simple card" style="max-width: 640px">
+&lt;div class="card-header">
+&lt;a href="https://www.instagram.com/koloot.design" class="card-link">koloot.design&lt;/a>
+&lt;/div>
+&lt;a href="https://instagram.com/p/BGvuInzyFAe/" rel="noopener" target="_blank">&lt;img class="card-img-top img-fluid" src="https://scontent-fml2-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/13437259_1631155187211476_646101738_n.jpg?_nc_ht=scontent-fml2-1.cdninstagram.com&amp;amp;_nc_cat=108&amp;amp;_nc_ohc=5e8M6qUfwyUAX8bPFyA&amp;amp;oh=cc27d47ffcebe3d30c292652bdf40530&amp;amp;oe=5F1C3A8F" width="640" height="451" alt="Instagram Image">&lt;/a>
+&lt;div class="card-body">
+&lt;a href="https://www.instagram.com/koloot.design" class="card-link">View More on Instagram&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;br>
+&lt;hr>
+&lt;h2 id="youtube-privacy-enhanced-shortcode">YouTube Privacy Enhanced Shortcode&lt;/h2>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/ZJthWmvUzzc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;br>
+&lt;hr>
+&lt;h2 id="twitter-simple-shortcode">Twitter Simple Shortcode&lt;/h2>
+&lt;style type="text/css">
+.twitter-tweet {
+font: 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+border-left: 4px solid #2b7bb9;
+padding-left: 1.5em;
+color: #555;
+}
+.twitter-tweet a {
+color: #2b7bb9;
+text-decoration: none;
+}
+blockquote.twitter-tweet a:hover,
+blockquote.twitter-tweet a:focus {
+text-decoration: underline;
+}
+&lt;/style>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”&lt;br>— Jan Tschichold &lt;a href="https://t.co/gcv7SrhvJb">pic.twitter.com/gcv7SrhvJb&lt;/a>&lt;/p>&amp;mdash; Graphic Design History (@DesignReviewed) &lt;a href="https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw">January 17, 2019&lt;/a>&lt;/blockquote>
+&lt;br>
+&lt;hr>
+&lt;h2 id="vimeo-simple-shortcode">Vimeo Simple Shortcode&lt;/h2>
+&lt;style>
+.__h_video {
+position: relative;
+padding-bottom: 56.23%;
+height: 0;
+overflow: hidden;
+width: 100%;
+background: #000;
+}
+.__h_video img {
+width: 100%;
+height: auto;
+color: #000;
+}
+.__h_video .play {
+height: 72px;
+width: 72px;
+left: 50%;
+top: 50%;
+margin-left: -36px;
+margin-top: -36px;
+position: absolute;
+cursor: pointer;
+}
+&lt;/style>
+&lt;div class="s_video_simple __h_video">
+&lt;a href="https://vimeo.com/4.8912912e&amp;#43;07" rel="noopener" target="_blank">
+&lt;img src="https://i.vimeocdn.com/video/337401969_640.jpg" srcset="https://i.vimeocdn.com/video/337401969_640.jpg 1x, https://i.vimeocdn.com/video/337401969.jpg 2x" alt="Sing Jan Swing - Kinetic Type">
+&lt;div class="play">&lt;svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61">&lt;circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000">&lt;/circle>&lt;path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff">&lt;/path>&lt;/svg>&lt;/div>&lt;/a>&lt;/div></description></item></channel></rss>
