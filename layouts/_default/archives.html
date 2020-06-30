@@ -8,6 +8,15 @@
       <article class="article">
         <h1 class="artitle__title"><a href="{{.Permalink}}">{{ .Title }}</a></h1>
 
+        I like to talk about: 
+        {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+          {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            <a href={{ .RelPermalink }} title="All pages with tag {{$name}}" class="no-underline">
+              {{$name}} <sup>{{$cnt}}</sup>
+            </a>
+          {{end}}
+        {{end}}
+
         {{ range site.RegularPages.GroupByDate "2006" -}}
             {{ partial "post-summary.html" . }}
         {{ end }}
