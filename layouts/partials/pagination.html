@@ -1,0 +1,50 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav aria-label="Page navigation">
+  <ul class="mt-2 flex justify-center">
+    {{ if $pag.HasPrev }}
+      <li>
+        <a class="m-2 p-2" href="{{ $pag.First.URL }}">First</a>
+      </li>
+      <li>
+        <a class="m-2 p-2" href="{{ $pag.Prev.URL }}" rel="prev">Prev</a>
+      </li>
+    {{ else }}
+      <li>
+        <span class="m-2 p-2 opacity-25">First</span>
+      </li>
+      <li>
+        <span class="m-2 p-2 opacity-25">Prev</span>
+      </li>
+    {{ end }}
+
+    {{ range $pag.Pagers }}
+      {{ if eq . $pag }}
+      <li>
+        <span class="m-2 p-2 font-bold" href="{{ .URL }}">{{ .PageNumber }}</span>
+      </li>
+      {{ else }}
+      <li>
+        <a class="m-2 p-2" href="{{ .URL }}">{{ .PageNumber }}</a>
+      </li>
+      {{ end }}
+    {{ end }}
+
+    {{ if $pag.HasNext }}
+      <li>
+        <a class="m-2 p-2" href="{{ $pag.Next.URL }}" rel="next">Next</a>
+      </li>
+      <li>
+        <a class="m-2 p-2" href="{{ $pag.Last.URL }}">Last</a>
+      </li>
+    {{ else }}
+      <li>
+        <span class="m-2 p-2 opacity-25">Next</span>
+      </li>
+      <li>
+        <span class="m-2 p-2 opacity-25">Last</span>
+      </li>
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}
