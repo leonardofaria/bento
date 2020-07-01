@@ -11,9 +11,7 @@
         I like to talk about: 
         {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
           {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-            <a href={{ .RelPermalink }} title="All pages with tag {{$name}}" class="no-underline">
-              {{$name}} <sup>{{$cnt}}</sup>
-            </a>
+            <a href={{ .RelPermalink }} title="All post with tag {{$name}} ({{$cnt}} posts)">{{$name}}</a>&nbsp;
           {{end}}
         {{end}}
 
