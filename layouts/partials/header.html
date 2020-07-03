@@ -2,7 +2,7 @@
   {{if or (eq (substr .Site.Params.cover 0 7) "http://") (eq (substr .Site.Params.cover 0 8) "https://")}}
     <header id="header" class="header flex w-full m-0 bg-cover bg-top-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55)), url({{.Site.Params.cover}})">
   {{ else }}
-    <header id="header" class="header flex w-full m-0 bg-cover bg-top-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55)), url({{.Site.Params.cover | relURL}})">
+    <header id="header" class="header flex w-full m-0 bg-cover bg-top-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55)), url({{.Site.Params.cover | absURL}})">
   {{ end }}
     <div class="max-w-7xl mx-auto p-6 flex flex-col items-center w-full relative">
       <div class="block lg:hidden text-white self-end mx-2">
@@ -20,7 +20,7 @@
           {{if or (eq (substr .Site.Params.avatar 0 7) "http://") (eq (substr .Site.Params.avatar 0 8) "https://")}}
             <img alt="{{ .Site.Title }}" class="w-24 h-24 lg:w-32 lg:h-32 rounded-full mb-3" src="{{.Site.Params.avatar}}">
           {{ else }}
-            <img alt="{{ .Site.Title }}" class="w-24 h-24 lg:w-32 lg:h-32 rounded-full mb-3" src="{{.Site.Params.avatar | relURL}}">
+            <img alt="{{ .Site.Title }}" class="w-24 h-24 lg:w-32 lg:h-32 rounded-full mb-3" src="{{.Site.Params.avatar | absURL}}">
           {{ end }}
         {{ end }}
         <a href="{{ .Site.Home.Permalink }}" class="text-4xl font-normal flex flex-shrink-0 text-center text-white focus:text-gray-300 opacity-75 hover:opacity-100 transition duration-300 ease-in-out">
