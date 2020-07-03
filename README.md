@@ -1,8 +1,8 @@
 # Bento Hugo Theme
 
-A minimalist theme for Hugo, build with Tailwind CSS.
+A minimalist theme for Hugo, built with Tailwind CSS.
 
-## Demo: [Bento](https://bento-hugo-theme.netlify.app/) - [My personal website](https://leonardofaria.net)
+## Demo: [Bento demo site](https://bento-hugo-theme.netlify.app/) - [My personal website](https://leonardofaria.net)
 
 ![Theme screenshot](https://raw.githubusercontent.com/leonardofaria/bento/master/images/screenshot.png)
 
@@ -15,6 +15,7 @@ A minimalist theme for Hugo, build with Tailwind CSS.
 - Google Analytics and Disqus integration
 - Syntax Highlighting with GitHub theme
 - Full content RSS
+- Turbolinks: no page refresh
 - Support to custom links in the top bar
 - Subtle animations
 
