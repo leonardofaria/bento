@@ -18,7 +18,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "@tailwindcss/ui": "^0.3.0",
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.4",
     "gh-pages": "^2.2.0",
     "postcss": "^7.0.28",
     "postcss-cli": "^7.1.1",
