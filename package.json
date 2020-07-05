@@ -16,7 +16,7 @@
     "start": "hugo --gc"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "@tailwindcss/ui": "^0.3.0",
     "autoprefixer": "^9.7.6",
     "gh-pages": "^2.2.0",
