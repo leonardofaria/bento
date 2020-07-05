@@ -30,7 +30,6 @@ tag = "tags"
 
   copyright = "Copyright © 2020 Someone"
 
-  # favicon = "favicon.ico" # TODO: add support
   cover = "images/vancouver.jpg"
   ogImage = "images/og_image.jpg"
 
@@ -39,18 +38,21 @@ tag = "tags"
   linkedin = "https://linkedin.com/in/XXXX"
   email = "email@xxxx.com"
 
-
-  # logo = "images/logo.png" # TODO: add support
   avatar = "images/avatar.jpg"
-
   authorBio = "Bento is a doggo who likes to code. Follow him on <a href='#'>Twitter</a>"
 
-[[menu.main]]
-    name = "About"
-    url = "/about"
-    weight = 1
+[menu]
+  [[menu.main]]
+      name = "About"
+      url = "/about"
+      weight = 1
 
-[[menu.main]]
-    name = "Source code"
-    url = "https://github.com/leonardofaria/bento"
-    weight = 1
+  [[menu.main]]
+      name = "Archives"
+      url = "/archives"
+      weight = 1
+
+  [[menu.main]]
+      name = "Source code"
+      url = "https://github.com/leonardofaria/bento"
+      weight = 1
