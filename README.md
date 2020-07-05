@@ -18,6 +18,7 @@ A minimalist theme for Hugo, built with Tailwind CSS.
 - Turbolinks: no page refresh
 - Support to custom links in the top bar
 - Subtle animations
+- [Check all features live and learn more about customization](https://bento-hugo-theme.netlify.app/)
 
 ## Installation
 
@@ -54,6 +55,22 @@ $ npm run dev
 ```
 
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+
+## Customization
+
+### The home page
+
+The home page will show the headline, description and a list of all posts. 
+
+If you don't like this setup, in your Hugo website you can create a `layouts/index.html` if the content you like.
+
+### Writing posts
+
+Write posts using Markdown. You can also add HTML and use TailwindCSS classes for custom styles.
+
+The theme has support to categories and tags. Tags will be shown in the archives page.
+
+[Learn more about writing posts in the live demo website](https://bento-hugo-theme.netlify.app/).
 
 ## Update the theme
 
