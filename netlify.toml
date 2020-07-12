@@ -1,5 +1,5 @@
 [build]
-  publish = "public"
+  publish = "/opt/build/bento/public"
   command = "cd .. && mv repo bento && cd bento && yarn build:example"
   
 [build.environment]
