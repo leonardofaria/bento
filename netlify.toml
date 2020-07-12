@@ -1,0 +1,18 @@
+[build]
+  publish = "public"
+  command = "yarn build"
+  
+[build.environment]
+  HUGO_VERSION = "0.73.0"
+
+[context.deploy-preview]
+  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL yarn build"
+
+[context.deploy-preview.environment]
+  HUGO_GOOGLEANALYTICS = "dev"
+
+[context.branch-deploy]
+  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL yarn build"
+
+[context.branch-deploy.environment]
+  HUGO_GOOGLEANALYTICS = "dev"
