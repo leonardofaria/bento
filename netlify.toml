@@ -1,18 +1,18 @@
 [build]
   publish = "public"
-  command = "cd .. && cp -r repo bento && cd bento && yarn build:example && echo $PWD && cp -r public ../repo"
+  command = "cd .. && cp -r repo bento && cd bento && yarn build:example && echo $PWD && ls && cp -r public ../repo"
   
 [build.environment]
   HUGO_VERSION = "0.73.0"
 
 [context.deploy-preview]
-  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL cd .. && mv repo bento && cd bento && yarn build:example && echo $PWD && cp -r public ../repo"
+  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL cd .. && mv repo bento && cd bento && yarn build:example && echo $PWD && ls && cp -r public ../repo"
 
 [context.deploy-preview.environment]
   HUGO_GOOGLEANALYTICS = "dev"
 
 [context.branch-deploy]
-  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL cd .. && mv repo bento && cd bento && yarn build:example && echo $PWD && cp -r public ../repo"
+  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL cd .. && mv repo bento && cd bento && yarn build:example && echo $PWD && ls && cp -r public ../repo"
 
 [context.branch-deploy.environment]
   HUGO_GOOGLEANALYTICS = "dev"
