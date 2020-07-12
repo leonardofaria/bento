@@ -11,19 +11,16 @@
     "dev:example": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
     "build": "hugo --gc --minify",
     "build:example": "hugo --gc --minify -s exampleSite --themesDir=../..",
-    "deploy": "gh-pages -d public -b dist",
-    "deploy:example": "gh-pages -d exampleSite/public -b dist",
     "start": "hugo --gc"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
-    "@tailwindcss/ui": "^0.3.0",
-    "autoprefixer": "^9.7.6",
-    "gh-pages": "^2.2.0",
-    "postcss": "^7.0.28",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@tailwindcss/ui": "^0.3.1",
+    "autoprefixer": "^9.8.5",
+    "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.4.4"
+    "tailwindcss": "^1.4.6"
   },
   "browserslist": [
     "last 1 version",
