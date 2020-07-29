@@ -1,6 +1,6 @@
 theme = "bento"
 languageCode = "en-us"
-baseurl = "https://bento-hugo-theme.netlify.app/"
+baseurl = "https://www.example.com/"
 title = "Bento"
 
 author = "Leonardo Faria"
