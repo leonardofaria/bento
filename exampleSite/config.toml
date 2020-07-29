@@ -16,7 +16,7 @@ pygmentsCodefences = true
 pygmentsStyle = "vs"
 
 # Integrations
-googleAnalytics = "UA-157386-36"
+googleAnalytics = "UA-XXXXXX-YY"
 disqusShortname = "bento-hugo-theme"
 
 # Hightlight theme
