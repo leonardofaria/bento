@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "cd .. && mv repo bento && cd bento && yarn build:example && cp -r exampleSite/public ../repo"
+  command = "cd .. && mv repo bento && cd bento && HUGO_BASEURL=https://bento-hugo-theme.netlify.app/ yarn build:example && cp -r exampleSite/public ../repo"
   
 [build.environment]
   HUGO_VERSION = "0.73.0"
