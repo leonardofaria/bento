@@ -72,3 +72,7 @@
 </script>
 {{end}}
 {{ template "_internal/google_analytics.html" . }}
+
+{{ if and .Site.Params.fathomAnalytics .Site.Params.fathomAnalytics.siteID }}
+  {{- partial "fathom" . -}}
+{{ end }}
