@@ -10,4 +10,10 @@
   })(document, window, '//{{ .Site.Params.fathomAnalytics.serverURL | default "cdn.usefathom.com" }}/tracker.js', 'fathom');
   fathom('set', 'siteId', '{{ .Site.Params.fathomAnalytics.siteID }}');
   fathom('trackPageview');
+
+  document.addEventListener('turbolinks:load', (e) => {
+    if (typeof window.fathom === 'function') {
+      window.fathom('trackPageview');
+    }
+  });
 </script>
