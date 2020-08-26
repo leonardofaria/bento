@@ -51,11 +51,16 @@ disqusShortname = "bento-hugo-theme"
   # Bio is shown in the end of posts
   authorBio = "Bento is a doggo who likes to code. Follow him on <a href='#'>Twitter</a>"
 
-# If you want to use fathom(https://usefathom.com) for analytics, add this section
+# If you want to use fathom (https://usefathom.com) for analytics, add this section
 [params.fathomAnalytics]
-    siteID = "XXXXX"
-    # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-    serverURL = "analytics.example.com"
+  siteID = "XXXXX"
+  # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+  serverURL = "analytics.example.com"
+
+# If you want to use umami (https://umami.is/) for analytics, add this section
+[params.umami]
+  siteID = "XXXXX"
+  trackerScript = "//umami.example.com/umami.js"
 
 # Items in the top menu
 [menu]

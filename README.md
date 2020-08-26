@@ -12,7 +12,7 @@ A minimalist theme for Hugo, built with Tailwind CSS.
 - Responsive
 - Super-fast - [100% in Lighthouse tests](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fbento-hugo-theme.netlify.app%2F)
 - Tailwind CSS with PostCSS: super tiny CSS file
-- Google Analytics, Fathom Analytics and Disqus integration
+- Google Analytics, Fathom Analytics, Umami and Disqus integration
 - Syntax Highlighting with GitHub theme
 - Full content RSS
 - Turbolinks: no page refresh
