@@ -20,7 +20,7 @@
     "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.7.3"
+    "tailwindcss": "^1.9.6"
   },
   "browserslist": [
     "last 1 version",
