@@ -52,7 +52,7 @@ html {
 .article {
   @apply px-5;
   @apply pb-5;
-  @apply text-gray-500;
+  @apply text-gray-600;
 }
 
 .article__header {
@@ -63,6 +63,10 @@ html {
 .artitle__title {
   @apply leading-tight;
   @apply mb-4;
+}
+
+.article__content > p:first-of-type {
+  @apply text-2xl;
 }
 
 .article a {
@@ -85,6 +89,7 @@ html {
 .article h1 {
   @apply text-5xl;
   @apply font-semibold;
+  @apply tracking-tighter;
   @apply text-gray-700;
 }
 
