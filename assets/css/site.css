@@ -69,6 +69,15 @@ html {
   @apply text-2xl;
 }
 
+.article__content > p > img,
+.article__content > video,
+.article__content > .wide {
+  @apply max-w-4xl;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .article a {
   @apply underline;
   @apply text-gray-700;
