@@ -66,6 +66,7 @@ html {
 }
 
 .article__content > p:first-of-type {
+  @apply tracking-tight;
   @apply text-2xl;
 }
 
@@ -81,20 +82,19 @@ html {
 }
 
 .article a {
-  @apply underline;
   @apply text-gray-700;
   @apply transition;
   @apply duration-300;
   @apply ease-in-out;
 }
 
+.article a:not(.no-underline) {
+  @apply underline;
+}
+
 .article a:hover,
 .article a:focus {
   @apply text-blue-600;
-}
-
-.artitle__title a {
-  @apply no-underline;
 }
 
 .article h1 {
@@ -153,6 +153,7 @@ html {
 .article h4,
 .article h5,
 .article h6 {
+  @apply tracking-tighter;
   scroll-margin-top: 8rem;
 }
 
@@ -161,7 +162,6 @@ html {
 .article ol,
 .article dl,
 .article td {
-  @apply font-serif;
   @apply text-xl;
 }
 
@@ -312,7 +312,9 @@ html {
   @apply my-6;
 }
 
-.intro p {
+.intro p,
+.article__content > p:first-of-type {
+  @apply tracking-tight;
   @apply text-2xl;
 }
 

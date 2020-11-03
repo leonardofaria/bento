@@ -6,14 +6,16 @@
     <main class="flex-1 max-w-3xl mt-32 mx-auto text-gray-700 w-full">
       <div id="reading-progress-bar" role="presentation" class="fixed z-10 top-0 left-0 h-1 bg-gray-700"></div>
       <article class="article">
-        <h1 class="artitle__title"><a href="{{.Permalink}}">{{ .Title }}</a></h1>
+        <h1><a href="{{.Permalink}}" class="no-underline">{{ .Title }}</a></h1>
 
-        I like to talk about: 
-        {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-          {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-            <a href={{ .RelPermalink }} title="All post with tag {{$name}} ({{$cnt}} posts)">{{$name}}</a>&nbsp;
+        <p class="intro">
+          I like to talk about: 
+          {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+              <a href={{ .RelPermalink }} title="All post with tag {{$name}} ({{$cnt}} posts)" class="no-underline">{{$name}}</a>&nbsp;
+            {{end}}
           {{end}}
-        {{end}}
+        </p>
 
         {{ range site.RegularPages.GroupByDate "2006" -}}
             {{ partial "post-summary.html" . }}

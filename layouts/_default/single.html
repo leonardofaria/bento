@@ -2,7 +2,7 @@
 <div id="reading-progress-bar" role="presentation" class="fixed z-10 top-0 left-0 h-1 bg-gray-700"></div>
 
 <article class="article">
-    <h1 class="artitle__title"><a href="{{.Permalink}}">{{ .Title }}</a></h1>
+    <h1><a href="{{.Permalink}}" class="no-underline">{{ .Title }}</a></h1>
 
     {{if not .Params.hideMetadata }}
       <header class="article__header">
@@ -10,7 +10,7 @@
         <span class="">
           Read in {{ .ReadingTime }} {{ $readTime }} &middot;
           <time datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" (default .Date (.PublishDate)) }}">
-            {{ dateFormat "2 Jan, 2006" (default .Date (.PublishDate)) }}
+            {{ dateFormat "January 2, 2006" (default .Date (.PublishDate)) }}
           </time>
         </span>
       </header>

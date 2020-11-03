@@ -2,7 +2,7 @@
   <div id="reading-progress-bar" role="presentation" class="fixed z-10 top-0 left-0 h-1 bg-gray-700"></div>
 
   <article class="article">
-    <h1 class="artitle__title"><a href="{{.Permalink}}">Posts with the tag {{ .Title }}</a></h1>
+    <h1><a href="{{.Permalink}}" class="no-underline">Posts with the tag {{ .Title }}</a></h1>
 
     {{ range .Paginator.Pages }}
       <div class="border-b border-gray-400">

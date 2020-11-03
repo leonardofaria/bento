@@ -4,7 +4,7 @@
   <ol class="md:pt-3 mb-4">
     {{ range where .Pages "Type" "ne" "page" -}}
     <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}" class="tracking-tight">{{ .Title }}</a>
     </li>
     {{- end }}
   </ol>
