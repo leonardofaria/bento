@@ -18,6 +18,7 @@ html {
   background-color: #4fafed;
 }
 
+/* Home page header - with triangle effect */
 .header {
   position: relative;
   min-height: 400px;
@@ -48,28 +49,18 @@ html {
   border-right: 0;
 }
 
-/* .article styles */
+/* 
+ * These styles are needed since the markup is 
+ * created dynamically from MD files
+ */
+
 .article {
   @apply px-5;
   @apply pb-5;
   @apply text-gray-600;
 }
 
-.article__header {
-  @apply text-right;
-  @apply pb-6;
-}
-
-.artitle__title {
-  @apply leading-tight;
-  @apply mb-4;
-}
-
-.article__content > p:first-of-type {
-  @apply tracking-tight;
-  @apply text-2xl;
-}
-
+/* Make images/videos wider than post width, like Medium */
 @screen lg {
   .article__content > p > img,
   .article__content > video,
@@ -82,7 +73,6 @@ html {
 }
 
 .article a {
-  @apply text-gray-700;
   @apply transition;
   @apply duration-300;
   @apply ease-in-out;
@@ -92,8 +82,8 @@ html {
   @apply underline;
 }
 
-.article a:hover,
-.article a:focus {
+.article a:not([class^="text-"]):hover,
+.article a:not([class^="text-"]):focus {
   @apply text-blue-600;
 }
 
@@ -165,9 +155,8 @@ html {
   @apply text-xl;
 }
 
-
-.article ol,
-.article ul {
+.article ol:not(.list-none),
+.article ul:not(.list-none) {
   @apply ml-1;
   @apply list-inside;
   list-style-type: initial;
@@ -318,47 +307,7 @@ html {
   @apply text-2xl;
 }
 
-.author {
-  @apply my-5;
-  @apply pt-10;
-  @apply pb-5;
-  @apply border-t;
-  @apply border-gray-400;
-  @apply flex;
-  @apply items-center;
-}
-
-.author .author__avatar {
-  @apply border;
-  @apply border-gray-400;
-  @apply p-1;
-  @apply w-10;
-  @apply h-10;
-  @apply rounded-full;
-  @apply mr-3;
-}
-
-.author .author__bio {
-  @apply flex-grow;
-}
-
-.author .author__share {
-  @apply text-white;
-  @apply text-xs;
-  @apply font-bold;
-  @apply rounded-md;
-  @apply no-underline;
-  @apply flex;
-  @apply items-center;
-  @apply px-3;
-  @apply py-2;
-}
-
-.author .author__share:hover {
-  @apply text-white;
-}
-
-.comments,
+/* .pagination is created by Hugo */
 .pagination {
   @apply my-5;
   @apply py-5;

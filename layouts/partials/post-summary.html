@@ -1,10 +1,24 @@
 <div class="flex flex-col md:flex-row border-b border-gray-400">
   <h2 class="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">{{ .Key }}</h2>
   
-  <ol class="md:pt-3 mb-4">
+  <ol class="md:pt-3 mb-4 list-none">
     {{ range where .Pages "Type" "ne" "page" -}}
-    <li>
-      <a href="{{ .RelPermalink }}" class="tracking-tight">{{ .Title }}</a>
+    <li class="mb-8 flex flex-wrap">
+      <a href="{{ .RelPermalink }}" class="tracking-tight no-underline flex-grow w-full text-blue-600">
+        {{ .Title }}
+      </a>
+
+      <small class="mt-2 text-sm">
+        <time class="text-gray-500" datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" (default .Date (.PublishDate)) }}">
+          {{ dateFormat "January 2" (default .Date (.PublishDate)) }}
+        </time>
+
+        {{ range (.GetTerms "tags") }}
+          <a href="{{ .Permalink }}" class="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4">
+            {{ .LinkTitle }}
+          </a>
+        {{ end }}
+      </small>
     </li>
     {{- end }}
   </ol>
