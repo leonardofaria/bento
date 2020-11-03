@@ -159,7 +159,14 @@ html {
 .article ul:not(.list-none) {
   @apply ml-1;
   @apply list-inside;
-  list-style-type: initial;
+}
+
+.article ul:not(.list-none) {
+  @apply list-disc;
+}
+
+.article ol:not(.list-none) {
+  @apply list-decimal;
 }
 
 .article blockquote {
@@ -178,8 +185,6 @@ html {
 .article blockquote small {
   display: inline-block;
   margin: 0.8em 0 0.8em 1.5em;
-  font-size: 0.9em;
-  color: #CCC;
 }
 
 .article blockquote small:before {
@@ -187,11 +192,11 @@ html {
 }
 
 .article blockquote cite {
-  font-weight: 700;
+  @apply font-bold;
 }
 
 .article blockquote cite a {
-  font-weight: normal;
+  @apply font-normal;
 }
 
 .article code, tt {
