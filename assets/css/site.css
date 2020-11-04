@@ -88,30 +88,30 @@ html {
 }
 
 .article h1 {
-  @apply text-5xl;
+  @apply text-4xl;
   @apply font-semibold;
   @apply tracking-tighter;
   @apply text-gray-700;
 }
 
 .article h2 {
-  @apply text-4xl;
+  @apply text-3xl;
   @apply font-semibold;
   @apply text-gray-700;
 }
 
 .article h3 {
-  @apply text-3xl;
-  @apply text-gray-700;
-}
-
-.article h4 {
   @apply text-2xl;
   @apply text-gray-700;
 }
 
-.article h5 {
+.article h4 {
   @apply text-xl;
+  @apply text-gray-700;
+}
+
+.article h5 {
+  @apply text-lg;
   @apply text-gray-700;
 }
 
@@ -152,7 +152,7 @@ html {
 .article ol,
 .article dl,
 .article td {
-  @apply text-xl;
+  @apply text-lg;
 }
 
 .article ol:not(.list-none),
@@ -309,7 +309,7 @@ html {
 .intro p,
 .article__content > p:first-of-type {
   @apply tracking-tight;
-  @apply text-2xl;
+  @apply text-xl;
 }
 
 /* .pagination is created by Hugo */
