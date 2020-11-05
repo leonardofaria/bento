@@ -312,10 +312,23 @@ html {
   @apply my-6;
 }
 
+.dots {
+  background-color: transparent; 
+  background-image: radial-gradient(#2C5282 1px, transparent 1px); 
+  background-size: 20px 20px; 
+  width: 140px;
+  height: 80px;
+  z-index: -1;
+  transform: translate(-70px, -50%);
+  position: absolute;
+  opacity: 0.3;
+}
+
 .intro p,
 .article__content > p:first-of-type {
   @apply tracking-tight;
   @apply text-xl;
+  @apply text-gray-800;
 }
 
 /* .pagination is created by Hugo */

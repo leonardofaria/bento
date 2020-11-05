@@ -2,20 +2,32 @@
 <div id="reading-progress-bar" role="presentation" class="fixed z-10 top-0 left-0 h-1 bg-gray-700"></div>
 
 <article class="article">
-    <h1 class="leading-9">
-      <a href="{{.Permalink}}" class="no-underline text-black">{{ .Title }}</a>
-    </h1>
-
     {{if not .Params.hideMetadata }}
-      <header class="text-right pb-6">
-        {{ $readTime := cond (gt .ReadingTime 1) "minutes" "minute" }}
-        <span class="">
-          Read in {{ .ReadingTime }} {{ $readTime }} &middot;
-          <time datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" (default .Date (.PublishDate)) }}">
+      <header class="text-center pt-10 pb-6">
+        <small class="text-center text-sm">
+          <time class="text-gray-500" datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" (default .Date (.PublishDate)) }}">
             {{ dateFormat "January 2, 2006" (default .Date (.PublishDate)) }}
           </time>
-        </span>
+  
+          {{ range (.GetTerms "tags") }}
+            <a href="{{ .Permalink }}" class="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4">
+              {{ .LinkTitle }}
+            </a>
+          {{ end }}
+        </small>
+
+        <h1 class="leading-9 text-center">
+          <a href="{{.Permalink}}" class="no-underline inline-block text-black relative">
+            <div class="dots"></div>
+            {{ .Title }}
+          </a>
+        </h1>
       </header>
+
+    {{ else }}
+
+    <h1 class="leading-9"><a href="{{.Permalink}}" class="no-underline text-black">{{ .Title }}</a></h1>
+
     {{ end }}
 
     <div class="article__content">

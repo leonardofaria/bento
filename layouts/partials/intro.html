@@ -1,6 +1,9 @@
 {{ if .Site.Params.intro }}
   <div class="intro">
-    <h1>{{ .Site.Params.headline }}</h1>
+    <h1 class="relative">
+      <div class="dots" aria-hidden="aria-hidden"></div>
+      {{ .Site.Params.headline }}
+    </h1>
     <p>{{ .Site.Params.description }}</p>
   </div>
 {{ end }}
