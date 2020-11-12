@@ -53,7 +53,8 @@
     {{ else }}
       <meta name="twitter:data1" value="{{ .ReadingTime }} minutes" />
     {{ end }}
-
+    <meta name="twitter:label2" value="Published" />
+    <meta name="twitter:data2" value="{{ dateFormat "January 2, 2006" (default .Date (.PublishDate)) }}" />
     {{ range .Params.tags }}
       <meta property="article:tag" content="{{ . }}" />
     {{ end }}
