@@ -71,10 +71,12 @@
 {{end}}
 {{ template "_internal/google_analytics.html" . }}
 
-{{ if and .Site.Params.fathomAnalytics .Site.Params.fathomAnalytics.siteID }}
-  {{- partial "fathom" . -}}
-{{ end }}
+{{ if not .Site.IsServer }}
+  {{ if and .Site.Params.fathomAnalytics .Site.Params.fathomAnalytics.siteID }}
+    {{- partial "fathom" . -}}
+  {{ end }}
 
-{{ if and .Site.Params.umami }}
-  {{- partial "umami" . -}}
+  {{ if and .Site.Params.umami }}
+    {{- partial "umami" . -}}
+  {{ end }}
 {{ end }}
