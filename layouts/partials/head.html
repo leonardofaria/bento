@@ -106,7 +106,7 @@
     {{end}}
   {{end}}
 
-  {{with  .Site.Params.googleAnalyticsUserID }}
+  {{with .Site.Params.googleAnalyticsUserID }}
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -119,4 +119,8 @@
   </script>
   {{end}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script>
+  {{with .Site.Params.webmention }}
+    <link rel="webmention" href="https://webmention.io/{{.}}/webmention">
+    <link rel="pingback" href="https://webmention.io/{{.}}/xmlrpc">
+  {{end}}
 </head>

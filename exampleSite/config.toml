@@ -46,6 +46,10 @@ disqusShortname = "bento-hugo-theme"
   linkedin = "https://linkedin.com/in/XXXX"
   email = "email@xxxx.com"
 
+  # Learn more about webmention 
+  # https://sebastiandedeyne.com/adding-webmentions-to-my-blog/
+  # webmention = ""
+
   # Avatar (shown in the homepage)
   avatar = "images/avatar.jpg"
   # Bio is shown in the end of posts

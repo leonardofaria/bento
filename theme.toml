@@ -6,7 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/leonardofaria/bento/blob/master/LICENSE"
 description = "A minimalist theme for Hugo, build with Tailwind CSS."
 homepage = "https://github.com/leonardofaria/bento"
-tags = ["Hugo", "TailwindCSS", "minimal", "minimalist", "clean", "simple", "personal", "Google analytics", "Disqus", "Mobile", "Fast", "Syntax highlighting", "white", "modern"]
+tags = ["Hugo", "TailwindCSS", "minimal", "minimalist", "clean", "simple", "personal", "Google analytics", "Disqus", "Mobile", "Fast", "Syntax highlighting", "white", "modern", "webmention"]
 features = ["responsive", "fast"]
 min_version = "0.41"
 
