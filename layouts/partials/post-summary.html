@@ -1,7 +1,7 @@
 <div class="flex flex-col md:flex-row border-b border-gray-400">
   <h2 class="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">{{ .Key }}</h2>
   
-  <ol class="md:pt-2 mb-4 list-none w-full">
+  <ol class="mb-4 list-none w-full">
     {{ range where .Pages "Type" "ne" "page" -}}
     <li class="mb-8 flex flex-col no-underline rounded-md hover:bg-white transition duration-300 ease-in-out">
       <a href="{{ .RelPermalink }}" class="tracking-tight no-underline text-blue-600 m-2 mb-0">
