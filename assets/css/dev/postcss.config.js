@@ -16,6 +16,7 @@ module.exports = {
         'layouts/**/*.html',
         'content/**/*.html',
         'content/**/*.md',
+        '**/*.md',
       ],
       // Include any special characters you're using in this regular expression
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],

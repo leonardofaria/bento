@@ -8,19 +8,19 @@
   "license": "MIT",
   "scripts": {
     "dev": "hugo server --disableFastRender",
-    "dev:example": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
+    "dev:example": "hugo server --verbose -s exampleSite --themesDir=../.. --disableFastRender",
     "build": "hugo --gc --minify",
     "build:example": "hugo --gc --minify -s exampleSite --themesDir=../..",
     "start": "hugo --gc"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "@tailwindcss/ui": "^0.5.0",
-    "autoprefixer": "^9.8.6",
-    "postcss": "^8.1.6",
-    "postcss-cli": "^8.2.0",
-    "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.9.6"
+    "@tailwindcss/ui": "^0.7.2",
+    "autoprefixer": "^10.0.3",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "postcss-import": "^13.0.0",
+    "tailwindcss": "^2.0.1"
   },
   "browserslist": [
     "last 1 version",
