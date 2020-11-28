@@ -9,12 +9,11 @@
   "scripts": {
     "dev": "hugo server --disableFastRender",
     "dev:example": "hugo server --verbose -s exampleSite --themesDir=../.. --disableFastRender",
-    "build": "hugo --gc --minify",
-    "build:example": "hugo --gc --minify -s exampleSite --themesDir=../..",
+    "build": "NODE_ENV=production hugo --verbose --gc --minify",
+    "build:example": "NODE_ENV=production hugo --verbose --gc --minify -s exampleSite --themesDir=../..",
     "start": "hugo --gc"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@tailwindcss/ui": "^0.7.2",
     "autoprefixer": "^10.0.3",
     "postcss": "^8.1.10",

@@ -1,4 +1,16 @@
+const themeDir = __dirname + '/../../';
+
 module.exports = {
+  purge: {
+    content: [
+      './layouts/**/*.html', 
+      './content/**/*.md', 
+      './content/**/*.html',
+      themeDir + 'layouts/**/*.html',
+      themeDir + 'exampleSite/content/**/*.html',
+      themeDir + 'exampleSite/content/**/*.md',
+    ],
+  },
   theme: {
     fontFamily: {
       sans: [
@@ -38,7 +50,4 @@ module.exports = {
   plugins: [
     require('@tailwindcss/ui'),
   ],
-  future: {
-    removeDeprecatedGapUtilities: true,
-  },
 }
