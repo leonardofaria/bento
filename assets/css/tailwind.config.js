@@ -1,4 +1,11 @@
 module.exports = {
+  purge: {
+    content: [
+      './layouts/**/*.html', 
+      './content/**/*.md', 
+      './content/**/*.html',
+    ],
+  },
   theme: {
     fontFamily: {
       sans: [
@@ -38,7 +45,4 @@ module.exports = {
   plugins: [
     require('@tailwindcss/ui'),
   ],
-  future: {
-    removeDeprecatedGapUtilities: true,
-  },
 }
