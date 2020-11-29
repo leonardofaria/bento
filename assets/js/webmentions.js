@@ -82,8 +82,8 @@ const parseWebmentions = (data) => {
 
   resetContainers();
   render(likes, 'like-template', 'likes');
-  render(reposts, 'reply-template', 'likes');
-  render(replies, 'reply-template', 'shares');
+  render(reposts, 'reply-template', 'shares');
+  render(replies, 'reply-template', 'replies');
   renderSummary(likes.length, (reposts.length + replies.length), avatarUrls);
 }
 window.parseWebmentions = parseWebmentions;
