@@ -72,7 +72,6 @@ const parseWebmentions = (data) => {
         likes.push(l);
         break;
       case 'link':
-      case 'repost':
         reposts.push(l);
         break;
       default:
@@ -161,6 +160,7 @@ const getHostName = (url) => {
 const fillTemplate = (template, vals) => {
   template.querySelector('.js-avatar').src = vals.photo;
   template.querySelector('.js-author').href = vals.authorUrl;
+  template.querySelector('.js-author').title = vals.name;
   template.querySelector('.js-author-name').innerHTML = vals.name;
   template.querySelector('.js-author-name').href = vals.authorUrl;
   template.querySelector('.js-source').href = vals.url;
