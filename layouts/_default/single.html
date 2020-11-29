@@ -59,9 +59,21 @@
     {{ end }}
 
     {{if not .Params.hideComments }}
-      <section class="my-5 py-5 ">
-        <h2>Comments</h2>
-        {{ template "_internal/disqus.html" . }}
+      <section class="my-5 py-5 relative">
+        <h2>Interactions</h2>
+
+        {{if .Site.Params.webmention }}
+          <h3>Webmentions</h3>
+          {{ partial "webmentions.html" . }}
+
+          <h3>Comments</h3>
+        {{end}}
+
+        {{ if not .Site.IsServer }}
+          {{ template "_internal/disqus.html" . }}
+        {{ else }}
+          Disqus doesn't load in development mode
+        {{ end }}
       </section>
     {{ end }}
 </article>

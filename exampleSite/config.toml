@@ -49,6 +49,8 @@ disqusShortname = "bento-hugo-theme"
   # Learn more about webmention 
   # https://sebastiandedeyne.com/adding-webmentions-to-my-blog/
   # webmention = ""
+  # productionBaseUrl is need if you want to receive webmentions in local environment
+  # productionBaseUrl = "https://yourwebsite.com"
 
   # Avatar (shown in the homepage)
   avatar = "images/avatar.jpg"
