@@ -18,7 +18,7 @@
   </div>
   <div>
     <a href="https://indieweb.org/Webmention" title="What are Webmentions?">
-      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
       </svg>
     </a>
@@ -26,41 +26,39 @@
 </div>
 
 <template id="reply-template" class="list-none">
-  <li class="h-entry flex mb-8 text-base">    
+  <li class="flex mb-8 text-base">    
     <a class="js-author flex-shrink-0" href="">
-      <img class="comment-avatar u-photo js-avatar w-8 h-8 rounded-full mr-3" alt="" src=""/>
+      <img class="js-avatar w-8 h-8 rounded-full mr-3" alt="" src=""/>
     </a>
-    <div class="comment-note__body">
-      <div class="p-author">
-        <strong><a class="no-underline u-author js-author-name" href=""></a></strong>
-        <small><a class="no-underline u-url js-date js-source" href=""></a></small>
+    <div>
+      <div>
+        <strong><a class="js-author-name no-underline" href=""></a></strong>
+        <small><a class="js-date js-source no-underline ml-2" href=""></a></small>
       </div>
-      <div class="js-content e-entry"></div>
+      <div class="js-content"></div>
     </div>
   </li>
 </template>
 <template id="like-template" class="list-none">
-  <li class="h-entry flex mb-8 text-base">
-    <a class="reply__avatar u-author js-author flex-shrink-0" href="">
-      <img class="u-photo js-avatar w-8 h-8 rounded-full mr-3" alt="" src=""/>
+  <li class="flex mb-8 text-base">
+    <a class="js-author flex-shrink-0" href="">
+      <img class="js-avatar w-8 h-8 rounded-full mr-3" alt="" src=""/>
     </a>
-    <a class="no-underline u-url js-source" href="">
-      <span class="reply__author p-name js-sentence js-author-name" href=""></span>
-      <small class="reply__date js-date" href=""></small>
+    <a class="js-source no-underline" href="">
+      <span class="js-sentence js-author-name" href=""></span>
+      <small class="js-date ml-2" href=""></small>
     </a>
   </li>
 </template>
 
 <div id="webmentions-interactions">
-  <ul class="replies" id="replies"></ul>
-  <ul class="shares" id="shares"></ul>
+  <ul id="replies"></ul>
+  <ul id="shares"></ul>
 </div>
 
 <div id="webmentions-likes">
-  <ul class="likes" id="likes"></ul>
+  <ul id="likes"></ul>
 </div>
-
-<div id="comments"></div>
 
 <script type="text/javascript">
   var webmentions = (permalink, aliases, productionBaseUrl) => {
