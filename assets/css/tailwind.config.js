@@ -14,8 +14,8 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
-        'Inter',
-        'system-ui',
+        'Inter', // Add Inter
+        'system-ui', // Add default values
         '-apple-system',
         'BlinkMacSystemFont',
         'Segoe UI',
@@ -49,5 +49,30 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/ui'),
+    // Tweak letter-spacing according to Inter recommendations
+    // https://rsms.me/inter/dynmetrics/
+    // https://twitter.com/samselikoff/status/1203181354311208960
+
+    function({ addUtilities, theme }) {
+      const fontSizes = theme("fontSize", {});
+
+      Object.keys(fontSizes).forEach(key => {
+        let fontSize = fontSizes[key][0];
+
+        console.log(fontSize);
+        let pixels = +fontSize.replace('rem', '');
+        let tracking = -0.0223 + 0.185 * Math.exp(-0.1745 * pixels);
+
+        addUtilities(
+          {
+            [`.text-${key}`]: {
+              "font-size": fontSize,
+              "letter-spacing": `${tracking}rem`,
+            },
+          },
+          ["responsive"]
+        )
+      })
+    },
   ],
 }
