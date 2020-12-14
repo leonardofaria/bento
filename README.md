@@ -1,5 +1,7 @@
 # Bento Hugo Theme
 
+[![Buy me a coffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://www.buymeacoffee.com/leonardofaria)
+
 A minimalist theme for Hugo, built with Tailwind CSS.
 
 ## Demo: [Bento demo site](https://bento-hugo-theme.netlify.app/) - [My personal website](https://leonardofaria.net)
