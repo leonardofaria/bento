@@ -14,7 +14,6 @@
     "start": "hugo --gc"
   },
   "devDependencies": {
-    "@tailwindcss/ui": "^0.7.2",
     "autoprefixer": "^10.0.3",
     "postcss": "^8.1.10",
     "postcss-cli": "^8.3.0",
