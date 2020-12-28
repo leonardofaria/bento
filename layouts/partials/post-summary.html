@@ -1,10 +1,10 @@
-<div class="flex flex-col md:flex-row border-b border-gray-400">
-  <h2 class="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">{{ .Key }}</h2>
+<div class="flex flex-col border-b border-gray-400 md:flex-row">
+  <h2 class="flex-grow-0 flex-shrink-0 mb-2 text-3xl font-bold md:w-32">{{ .Key }}</h2>
   
-  <ol class="mb-4 list-none w-full">
+  <ol class="w-full mb-4 list-none">
     {{ range where .Pages "Type" "ne" "page" -}}
-    <li class="mb-8 flex flex-col no-underline rounded-md hover:bg-white transition duration-300 ease-in-out">
-      <a href="{{ .RelPermalink }}" class="tracking-tight no-underline text-blue-600 m-2 mb-0">
+    <li class="flex flex-col mb-8 no-underline transition duration-300 ease-in-out rounded-md hover:bg-white">
+      <a href="{{ .RelPermalink }}" class="m-2 mb-0 tracking-tight text-blue-600 no-underline">
         {{ .Title }}
       </a>
 
@@ -14,7 +14,7 @@
         </time>
 
         {{ range (.GetTerms "tags") }}
-          <a href="{{ .Permalink }}" class="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4">
+          <a href="{{ .Permalink }}" class="inline-flex items-center px-4 py-1 ml-4 text-yellow-800 no-underline bg-yellow-100 rounded-full hover:bg-yellow-300">
             {{ .LinkTitle }}
           </a>
         {{ end }}

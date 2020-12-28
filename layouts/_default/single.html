@@ -1,23 +1,23 @@
 {{ define "main" }}
-<div id="reading-progress-bar" role="presentation" class="fixed z-10 top-0 left-0 h-1 bg-gray-700"></div>
+<div id="reading-progress-bar" role="presentation" class="fixed top-0 left-0 z-10 h-1 bg-gray-700"></div>
 
 <article class="article">
     {{if not .Params.hideMetadata }}
-      <header class="text-center pt-10 pb-6">
-        <small class="text-center text-sm">
+      <header class="pt-10 pb-6 text-center">
+        <small class="text-sm text-center">
           <time class="text-gray-500" datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" (default .Date (.PublishDate)) }}">
             {{ dateFormat "January 2, 2006" (default .Date (.PublishDate)) }}
           </time>
   
           {{ range (.GetTerms "tags") }}
-            <a href="{{ .Permalink }}" class="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4">
+            <a href="{{ .Permalink }}" class="inline-flex items-center px-4 py-1 ml-4 text-yellow-800 no-underline bg-yellow-100 rounded-full hover:bg-yellow-300">
               {{ .LinkTitle }}
             </a>
           {{ end }}
         </small>
 
         <h1 class="leading-9 text-center">
-          <a href="{{.Permalink}}" class="no-underline inline-block text-black relative">
+          <a href="{{.Permalink}}" class="relative inline-block text-black no-underline">
             <div class="dots" aria-hidden="true"></div>
             {{ .Title }}
           </a>
@@ -26,7 +26,7 @@
 
     {{ else }}
 
-    <h1 class="leading-9"><a href="{{.Permalink}}" class="no-underline text-black">{{ .Title }}</a></h1>
+    <h1 class="leading-9"><a href="{{.Permalink}}" class="text-black no-underline">{{ .Title }}</a></h1>
 
     {{ end }}
 
@@ -35,11 +35,11 @@
     </div>
 
     {{if not .Params.hideAuthorBio }}
-      <section class="my-5 pt-10 pb-5 border-t border-gray-400 flex items-center">
+      <section class="flex items-center pt-10 pb-5 my-5 border-t border-gray-400">
         {{if or (eq (substr .Site.Params.avatar 0 7) "http://") (eq (substr .Site.Params.avatar 0 8) "https://")}}
-          <img alt="Avatar photo" class="border border-gray-400 p-1 w-10 h-10 rounded-full mr-3" src="{{.Site.Params.avatar}}">
+          <img alt="Avatar photo" class="w-10 h-10 p-1 mr-3 border border-gray-400 rounded-full" src="{{.Site.Params.avatar}}">
         {{ else }}
-          <img alt="Avatar photo" class="border border-gray-400 p-1 w-10 h-10 rounded-full mr-3" src="{{.Site.Params.avatar | relURL}}">
+          <img alt="Avatar photo" class="w-10 h-10 p-1 mr-3 border border-gray-400 rounded-full" src="{{.Site.Params.avatar | relURL}}">
         {{ end }}
 
         <span class="flex-grow">{{ .Site.Params.authorBio | safeHTML }}</span>
@@ -47,8 +47,8 @@
         {{ $title := .Title }}
         {{ $url := printf "%s" .URL | absLangURL }}
         {{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n" $url "\n" }}
-        <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Params.twitter }}{{ . }}{{ end }}" class="text-white text-xs font-bold rounded-md no-underline flex items-center px-3 py-2 bg-twitter hover:color-white hover:opacity-75 no-underline">
-          <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Params.twitter }}{{ . }}{{ end }}" class="flex items-center px-3 py-2 text-xs font-bold text-white no-underline rounded-md bg-twitter hover:color-white hover:opacity-75">
+          <svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <title>Twitter</title>
             <path d="M6.29 18.25c7.55 0 11.67-6.25 11.67-11.67v-.53c.8-.59 1.49-1.3 2.04-2.13-.75.33-1.54.55-2.36.65a4.12 4.12 0 0 0 1.8-2.27c-.8.48-1.68.81-2.6 1a4.1 4.1 0 0 0-7 3.74 11.65 11.65 0 0 1-8.45-4.3 4.1 4.1 0 0 0 1.27 5.49C2.01 8.2 1.37 8.03.8 7.7v.05a4.1 4.1 0 0 0 3.3 4.03 4.1 4.1 0 0 1-1.86.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 0 16.4a11.62 11.62 0 0 0 6.29 1.84"></path>
           </svg>
@@ -59,7 +59,7 @@
     {{ end }}
 
     {{if not .Params.hideComments }}
-      <section class="my-5 py-5 relative">
+      <section class="relative py-5 my-5">
         <h2>Interactions</h2>
 
         {{if .Site.Params.webmention }}
