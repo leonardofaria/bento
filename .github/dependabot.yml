@@ -1,0 +1,28 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "13:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - leonardofaria
+  ignore:
+  - dependency-name: tailwindcss
+    versions:
+    - 2.0.3
+    - 2.0.4
+    - 2.1.1
+  - dependency-name: postcss
+    versions:
+    - 8.2.10
+    - 8.2.5
+    - 8.2.6
+    - 8.2.7
+    - 8.2.8
+    - 8.2.9
+  - dependency-name: autoprefixer
+    versions:
+    - 10.2.3
+    - 10.2.4
